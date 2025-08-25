@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+
+    <input id="clickme" type="button" value="button"/>
+
+    <script>
+        const clickme = document.getElementById("clickme");
+
+        clickme.addEventListener("click", function(){clickme.setAttribute("value", "you allready clickme")});
+    </script>
+
+    <!-- <div id="content" class="content" ></div>
+    <script>
+        const content= document.getElementById("content");
+        const title = document.createElement("h1");
+        title.textContent ="hfdjskzfbj bhgdf fshdkj euqo";
+        content.appendChild(title);
+    </script> -->
+  <!-- <p id="teks">ini adalah teks njdkbaj</p>
+   <script>
+    const teks = document.getElementById("teks");
+
+    console.info(teks);
+   </script>-->
+
+   <!-- <ul id="menu">
+    <li id="item 1">indomie</li>
+    <li id="item 2">indomie</li>
+    <li id="item 3">indomie</li>
+   </ul> -->
+
+   <!-- <p id="title">dom</p>
+
+<script>
+    const title = document.getElementById("title");
+    title.textContent = "belajar dom";
+    // const menu = document.getElementById("menu");
+    // console.info(menu);
+    // console.info(menu.children);
+    // const item = document.getElementById("item 1");
+    // console.info(item);
+    // console.info(item.nextSibling);
+</script> -->
+
+</body>
+</html>
+
+ <!--<script>
+        const orang ={};
+        orang["nama"] = "titi";
+        orang["kelas"] = "xi rpl 2";
+
+        console.table(orang);
+    </script>
+
+        console.log(document.title);
+        console.log(document.body);
+        console.log(document.head);-->
