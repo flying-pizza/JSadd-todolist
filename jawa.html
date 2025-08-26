@@ -28,10 +28,38 @@
         button.addEventListener("click", function () {
             const teksv = input.value.trim();
             if(teksv !== ""){
+
                 const li = document.createElement("li");
                 li.className = "todo-item";
-                li.textContent = teksv;
+
+                const spanText = document.createElement("span");
+                spanText.textContent = teksv;
+
+                li.appendChild(spanText);
+
+                const btnEdit = document.createElement("button");
+                btnEdit.textContent = "Edit";
+                btnEdit.style.backgroundColor = "pink";
+
+                btnEdit.addEventListener("click", function () {
+                    const newValue = prompt("edit tugas");
+                    if(newValue !== null && newValue.trim() !== "") {
+                        spanText.textContent = newValue;
+                    }
+                }); 
+                li.appendChild(btnEdit);
+
+                const btnDelete = document.createElement("button");
+                btnDelete.textContent = "Delete";
+                btnDelete.style.backgroundColor = "maroon";
+
+                btnDelete.addEventListener("click", function () {
+                    list.removeChild(li);
+                });
+                li.appendChild(btnDelete); 
+
                 list.appendChild(li);
+
                 input.value = "";
             }else{
                 alert("tidak boleh kosong");
